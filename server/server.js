@@ -1,18 +1,19 @@
 const path = require('path')
 const express = require('express')
 const cors = require('cors')
-
 const server = express()
 
 server.use(express.json())
-server.use(express.static(path.join(__dirname, './public')))
 server.use(cors('*'))
 
-server.get('/greeting', (req, res) => {
-  const greetings = ['hola', 'hi', 'hello', 'howdy']
-  let index = Math.floor(Math.random() * greetings.length)
-  console.log(index)
-  res.json({ greeting: greetings[index] })
+// for anything in the /public folder, such as index.html, css, images and bundle.js
+server.use(express.static(path.join(__dirname, './public')))
+
+// for any React routes, send to the index.html and the client handle the routing.
+server.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
+
+// data routes with api to indicate they are apis
 
 module.exports = server
