@@ -3,6 +3,14 @@ This is a starter project that uses webpack to transpile and bundle ES6 React co
 
 ## Setup
 
+### NPM Scripts
+
+npm install
+npm run knex migrate:latest
+npm run knex seed:run
+npm run dev
+
+
 ### Installation
 To use, consider these steps:
 

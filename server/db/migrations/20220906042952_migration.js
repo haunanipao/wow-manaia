@@ -6,9 +6,7 @@ exports.up = function (knex) {
     table.string('github')
     table.string('linkedin')
     table.string('discord')
-    table.string('bkg-colour')
-    table.string('text-colour')
-    table.string('social-colour')
+    table.string('deva')
   })
 }
 
