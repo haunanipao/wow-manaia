@@ -21,7 +21,22 @@ To use, consider these steps:
 git clone https://github.com/[your-account]/[your-app].git
 cd [your-app] && npm i
 ```
+### 0. Tasks to do
+- [x] Set up Repo
+- [x] Set up dependencies
+- [x] Frame skeleton structure
+- [x] Set up dbs - migration, seeds, sqlite3
+- [ ] Check data in Thunder Client
+- [ ] Set up api to get Wow data in the browser
+- [ ] Get route (server)
+- [ ] Set up db -> route -> api client
+- [ ] Set up form to add WOW
+- [ ] Show WOW in browser
+- [ ] CRUD
+- [ ] step
+- [ ] step
 
+---
 To start the development server with a watcher that rebuilds your code, run `npm run dev`. The assets built by webpack are placed in `server/public`. This folder is defined as a static folder in an Express.js server that can be started with `npm run server`.
 
 Additional components should be placed in `client/components`.
@@ -39,4 +54,6 @@ and in the other:
 npm run server
 ```
 The client will be available on http://localhost:8080 and the server on http://localhost:3000. Note that you will still need to manage CORS between the two, as they are on different ports.
+
+https://knexjs.org/guide/migrations.html#migration-cli
 
