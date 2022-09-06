@@ -26,6 +26,7 @@ cd [your-app] && npm i
 - [x] Set up dependencies
 - [x] Frame skeleton structure
 - [x] Set up dbs - migration, seeds, sqlite3
+- [x] Set up /server/server.js, /routes/wow.js, /db/db.js
 - [ ] Check data in Thunder Client
 - [ ] Set up api to get Wow data in the browser
 - [ ] Get route (server)

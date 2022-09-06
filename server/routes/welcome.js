@@ -5,7 +5,7 @@ const router = express.Router()
 // GET /api/v1/welcome/
 router.get('/', (req, res) => {
   try {
-    res.json({ statement: 'Welcome to Mana Bank Project' })
+    res.json({ statement: 'This is your moment of WOW' })
   } catch (err) {
     res.status(500).send(err.message)
   }

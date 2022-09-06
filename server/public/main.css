@@ -1,14 +1,22 @@
+/* DEVA Colours */
+/* White: #fff;
+Yellow:#FCC21B;
+Blue: #5FC6CB;
+Purple: #3D0F71;
+Pink: #EF3A58; */
+
+
 body {
   background-color:  white;
   font-family: 'Montserrat Alternates', sans-serif;
 
 }
 header {
-  background-color: antiquewhite;
-}
-
-footer {
-  background-color: antiquewhite;
+  background-color: #5FC6CB;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 ul {
@@ -21,24 +29,72 @@ li {
 }
 input {
   width: 100%;
-  margin:10px;
+  margin: 10px;
   padding: 10px;
 }
-
-/* button {
+footer {
+  background-color: #5FC6CB;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  margin:10px;
-  padding: 10px;
-  background-color: blueviolet;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  display: inline-block;
+  padding-top: 10px;
+  margin: 0 10px;
   color: white;
-  border: 0px;
-  font-size: 1em;
-} */
+}
+
+footer a:link, footer a:visited {
+  color: #AFC2D5;
+}
+
+footer a:hover {
+  color: white;
+}
+
+button {
+  background-color: #EF3A58;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 0.8rem;
+}
 .app {
   display: flex;
   flex-direction: column;
 }
+.grid {
+  background-color: black;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 3rem 2rem 3rem;
+}
+.card {
+  background-size: 75px;
+  background-repeat: no-repeat;
+  background-position: center top 10px;
+  background-color: #ECF6FA;
+  box-shadow: 5px 5px 15px #999;
+  padding: 15px;
+  margin: 10px;
+  width: 250px;
+  list-style: none;
+}
+
 .container {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -47,10 +103,11 @@ input {
 }
 
 .form {
+  width: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-
 
 }
 

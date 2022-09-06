@@ -15,6 +15,6 @@ server.get('*', (req, res) => {
 
 // data routes with api to indicate they are apis
 const wow = require('./routes/wow')
-server.use('/api/v1/wow', wow)
+server.use('/api/v1/wow/', wow)
 
 module.exports = server

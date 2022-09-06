@@ -1,23 +1,25 @@
 import request from 'superagent'
+const serverURL = '/api/v1/wow/'
 
 export function getWow() {
-  return request.get('/').then((res) => res.body.wow)
+  return request.get(serverURL).then((res) => console.log(res.body))
 }
 
-// const serverURL = 'http://localhost:3000/api/v1/wow'
 // Calls to api lives here
 // *** EXAMPLE ***
 // export function getWelcome() {
 //   return request.get(`${serverURL}/welcome`).then((response) => response.body)
 // }
-// // Proxy API and special key
-// export function getHeros(value) {
-//   return (
-//     request
-//       // .get(`/api/v1/marvel/marvel/test?search=${value}`)
-//       .get(`/api/v1/marvel/marvel/test/${value}`)
-//       .then((response) => {
-//         console.log(response.body)
-//       })
-//   )
+//
+// export function addWow(form) {
+//   return request
+//     .post(serverUrl)
+//     .send(form)
+//     .then((res) => {
+//       if (res.status === 200) {
+//         return res.body
+//       } else {
+//         throw new Error('wow not saved')
+//       }
+//     })
 // }
