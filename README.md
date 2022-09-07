@@ -27,15 +27,15 @@ cd [your-app] && npm i
 - [x] Frame skeleton structure
 - [x] Set up dbs - migration, seeds, sqlite3
 - [x] Set up /server/server.js, /routes/wow.js, /db/db.js
-- [ ] Check data in Thunder Client
-- [ ] Set up api to get Wow data in the browser
-- [ ] Get route (server)
-- [ ] Set up db -> route -> api client
+- [x] Check data in Thunder Client
+- [x] Set up api to get Wow data in the browser
+- [x] Get route (server)
+- [x] Set up db -> route -> api client
 - [ ] Set up form to add WOW
 - [ ] Show WOW in browser
 - [ ] CRUD
-- [ ] step
-- [ ] step
+- [ ] CSS Magic
+- [ ] do I wanna do auth, redux
 
 ---
 To start the development server with a watcher that rebuilds your code, run `npm run dev`. The assets built by webpack are placed in `server/public`. This folder is defined as a static folder in an Express.js server that can be started with `npm run server`.
