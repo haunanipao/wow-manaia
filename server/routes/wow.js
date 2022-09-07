@@ -6,7 +6,6 @@ const db = require('../db/db')
 router.get('/', (req, res) => {
   db.getWow()
     .then((wow) => {
-      console.log(res.json(wow))
       res.json(wow)
     })
     .catch((err) => {

@@ -1,8 +1,8 @@
 import request from 'superagent'
-const serverURL = '/api/v1/wow/'
+const serverURL = '/api/v1/wow'
 
 export function getWow() {
-  return request.get(serverURL).then((res) => console.log(res.body))
+  return request.get(serverURL).then((res) => res.body)
 }
 
 // Calls to api lives here
