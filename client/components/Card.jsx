@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 // return everything as a linkable element
+// pass the data to the card.
 export default function Card({ id, name, quote }) {
   return (
     <>
