@@ -1,7 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from '../routes/Home'
-import Words from '../routes/Words'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
@@ -12,7 +11,6 @@ const App = () => {
         <Header />
         <Routes>
           <Route path={'/'} element={<Home />} />
-          <Route path={'/words'} element={<Words />} />
         </Routes>
         <Footer />
       </Router>

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { getWow } from '../apiClient'
 import Container from '../components/Container'
-// import Grid from '../components/Grid'
 import Card from '../components/Card'
+import Card2 from '../components/Card2'
+import AddWow from '../components/AddWow'
 
 // This is the main bit
 export default function Home() {
@@ -18,18 +19,14 @@ export default function Home() {
       })
   }, [])
 
-  let cards = ''
-
   return (
     <Container>
-      {/* <button>Add your words of wisdom</button> */}
-
-      {
-        (cards = wows.map((wow) => {
-          return <Card key={wow.id} name={wow.name} quote={wow.quote} />
-        }))
-      }
-      {/* <Grid>{cards ? cards : null}</Grid> */}
+      <AddWow />
+      <Card2 />
+      {/* think about refactor */}
+      {wows.map((wow) => {
+        return <Card key={wow.id} name={wow.name} quote={wow.quote} />
+      })}
     </Container>
   )
 }

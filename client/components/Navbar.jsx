@@ -5,12 +5,8 @@ export default function Navbar() {
     <header>
       <nav className="navbar">
         <ul>
-          <li>WOW logo</li>
           <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="words">Add your Moments of WOW</a>
+            <a href="/">WOW logo</a>
           </li>
         </ul>
       </nav>
