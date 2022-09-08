@@ -8,15 +8,13 @@ export default function Card({ info }) {
     <>
       {info.map((wow) => {
         return (
-          <>
-            <Link to={`/`}>
-              <div className="card" key={wow.id}>
-                <h2 key={wow.quote}>{wow.quote}</h2>
-                <h2 key={wow.name}>{wow.name}</h2>
-                <h2 key={wow.id}>{wow.id}</h2>
-              </div>
-            </Link>
-          </>
+          <Link to={`/`} key={wow.id}>
+            <div className="card">
+              <h2 key={wow.quote}>{wow.quote}</h2>
+              <h2 key={wow.name}> ~ {wow.name}</h2>
+              <h2 key={wow.id}>{wow.id}</h2>
+            </div>
+          </Link>
         )
       })}
     </>

@@ -6,13 +6,17 @@ import AddWow from '../components/AddWow'
 
 // This is the main bit
 export default function Home() {
-  const [wows, setWow] = useState([])
+  const [wows, setWows] = useState([])
+
+  function appendWow(newWow) {
+    setWows([...wows, newWow]) // add the new object to the wows database
+  }
 
   useEffect(() => {
     getWow()
       .then((wow) => {
         // console.log('wow',wow)
-        setWow(wow)
+        setWows(wow)
       })
       .catch((err) => {
         console.error(err)
@@ -23,7 +27,8 @@ export default function Home() {
   return (
     <Container>
       <div>
-        <AddWow />
+        <AddWow setWows={appendWow} />
+        {/* // reference to setWows function on line 9 */}
       </div>
       <div className="cards">
         <Card info={wows} />

@@ -6,8 +6,7 @@ const initialFormData = {
   quote: '',
 }
 
-export default function AddWow() {
-  const [wows, setWows] = useState([])
+export default function AddWow(props) {
   const [form, setForm] = useState(initialFormData)
 
   function handleChange(event) {
@@ -23,8 +22,8 @@ export default function AddWow() {
   function handleSubmit(event) {
     event.preventDefault()
     addWow(form)
-      .then((addWow) => {
-        setWows([...wows, addWow])
+      .then((newWow) => {
+        props.setWows(newWow) // <<< pass the object!!
         setForm(initialFormData)
       })
       .catch((err) => {
