@@ -23,8 +23,8 @@ export default function AddWow() {
   function handleSubmit(event) {
     event.preventDefault()
     addWow(form)
-      .then((newWow) => {
-        setWows([...wows, newWow])
+      .then((addWow) => {
+        setWows([...wows, addWow])
         setForm(initialFormData)
       })
       .catch((err) => {

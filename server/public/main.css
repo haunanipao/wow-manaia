@@ -125,6 +125,15 @@ button {
   border: none;
   padding: 15px;
   font-size: 0.8rem;
+  box-shadow: 5px 5px 15px #999;
+}
+button:hover {
+  background-color: #3D0F71;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 0.8rem;
+  box-shadow: 5px 5px 15px #999;
 }
 .app {
   display: flex;
@@ -138,37 +147,41 @@ button {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin: 0 3rem 2rem 3rem;
+ 
 }
 .card {
+  min-height: 200px;
   background-size: 75px;
   background-repeat: no-repeat;
   background-position: center top 10px;
-  background-color: #ECF6FA;
+  background-color: #101011;
   box-shadow: 5px 5px 15px #999;
   padding: 15px;
   margin: 10px;
   width: 250px;
   list-style: none;
+  border-radius: 10px;
+  color: #FEC02D;
 }
 
 .container {
   min-height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
-  font-size: .5em;
+  font-size: .75em;
 }
 
 .form {
   width: 80%;
+  background-color: #3D0F71;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  margin: 2rem 3rem 2rem 3rem;
 }
 
 .navbar { 

@@ -23,4 +23,8 @@ function getWow(db = connection) {
 }
 
 // update
+
+// function updateWow(id, db = connection) {
+//   return db('wow').select() //by id work on this one.
+// }
 // delete

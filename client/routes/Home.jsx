@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { getWow } from '../apiClient'
 import Container from '../components/Container'
 import Card from '../components/Card'
-import Card2 from '../components/Card2'
 import AddWow from '../components/AddWow'
 
 // This is the main bit
@@ -12,21 +11,23 @@ export default function Home() {
   useEffect(() => {
     getWow()
       .then((wow) => {
+        // console.log('wow',wow)
         setWow(wow)
       })
       .catch((err) => {
         console.error(err)
       })
+    //console.log('using the effect')
   }, [])
 
   return (
     <Container>
-      <AddWow />
-      <Card2 />
-      {/* think about refactor */}
-      {wows.map((wow) => {
-        return <Card key={wow.id} name={wow.name} quote={wow.quote} />
-      })}
+      <div>
+        <AddWow />
+      </div>
+      <div className="cards">
+        <Card info={wows} />
+      </div>
     </Container>
   )
 }
