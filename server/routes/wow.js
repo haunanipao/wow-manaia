@@ -28,6 +28,12 @@ router.post('/', (req, res) => {
     })
 })
 
+// UPDATE /api/v1 fix that name
+// router.post('/:id', (req, res) => {})
+
+// DELETE /api/v1 fix that name
+// router.delete('/id', (req, res) => {})
+
 // router.post('/', (req, res) => {
 //   const newWow = req.body
 //   db.addWow(newWow)
