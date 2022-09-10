@@ -160,7 +160,7 @@ button:hover {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
-  align-content: flex-start;
+  
  
 }
 
@@ -196,7 +196,7 @@ button:hover {
 .wowName {
 
   font-family: 'Lobster Two', sans-serif;
- margin-top: 20px;
+  margin-top: 20px;
   font-weight: 400;
   font-size: 2em;
   margin-bottom: 20px;
@@ -212,7 +212,7 @@ button:hover {
   flex-direction: row;
   justify-content: center;
   align-items: start;
-  background-color:var(--Purple);
+
  
 }
 
