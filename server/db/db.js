@@ -32,6 +32,13 @@ function addWow(newWow, db = connection) {
     })
 }
 
+// create redux
+// function addWow(newWow, db = connection) {
+//   return db('wow')
+//     .insert({ name: newWow.name, quote: newWow.quote })
+//     .then(() => getWow(db))
+// }
+
 // update
 
 // function updateWow(id, db = connection) {

@@ -4,8 +4,32 @@ import Container from '../components/Container'
 import Card from '../components/Card'
 import AddWow from '../components/AddWow'
 
+// REDUX
+// import { fetchWows } from '../actions/redux.js'
+// import { useDispatch, useSelector } from 'react-redux'
+// REDUX
+
 // This is the main bit
 export default function Home() {
+  // REDUX
+  // const [wowss, setWows] = useState([])
+
+  // // this is a variable that useSelector(), which uses a state callback function() to return a variable from that function.
+  // const wows = useSelector((state) => state.wows) //goes to the reducer and looks for state
+  // const dispatch = useDispatch() //send thunks to reducers to change things
+
+  // function appendWow(newWow) {
+  //   setWows([...wowss, newWow])
+  //   // add the new object to the wows database
+  // }
+
+  // // call the dispatch and fetchWow(() to get the state
+  // useEffect(() => {
+  //   dispatch(fetchWows())
+  // }, [])
+  // REDUX
+
+  // REACT
   const [wows, setWows] = useState([])
 
   function appendWow(newWow) {
@@ -22,6 +46,7 @@ export default function Home() {
         console.error(err)
       })
   }, [])
+  // REACT
 
   return (
     <Container>
