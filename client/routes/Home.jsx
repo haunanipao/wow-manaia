@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <Container>
-      <div className="centerThis">
+      <div className="centerThis gradient-pattern">
         <AddWow setWows={appendWow} />
         {/* // reference to setWows function on line 9, passes appendWow function */}
       </div>

@@ -49,7 +49,7 @@ export default function AddWow(props) {
           name="name"
           placeholder="Who shared it?"
         />
-        <button>Add more WOW</button>
+        <button>Add More WOW</button>
       </form>
     </>
   )

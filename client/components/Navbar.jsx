@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Navbar() {
   return (
-    <header>
+    <header className="gradient-pattern">
       <div>
         <h1>Manaia Words of Wisdom</h1>
         <h3>

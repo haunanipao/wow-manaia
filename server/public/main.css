@@ -92,7 +92,6 @@ body {
 
 }
 header {
-  background-color:var(--Purple);
   color: var(--Light);
   display: flex;
   flex-direction: row;
@@ -118,7 +117,7 @@ input {
   padding: 10px;
 }
 footer {
-  background-color:var(--Purple);
+  padding: 30px;
   font-size: 0.8rem;
   width: 100%;
   height: 60px;
@@ -130,11 +129,14 @@ footer {
 }
 
 button {
-  background-color:var(--Pink);
-  color: var(--Light);
+  background-color:var(--Yellow);
+  color: var(--Purple);
+  min-width:25%;
   border: none;
   padding: 15px;
+  margin: 15px;
   font-size: 0.8rem;
+  font-weight: 600;
   /* box-shadow: 5px 5px 15px #999; */
   border-radius: 25px;
   cursor: pointer;
@@ -158,6 +160,7 @@ button:hover {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
+  align-content: flex-start;
  
 }
 
@@ -193,6 +196,7 @@ button:hover {
 .wowName {
 
   font-family: 'Lobster Two', sans-serif;
+ margin-top: 20px;
   font-weight: 400;
   font-size: 2em;
   margin-bottom: 20px;
@@ -239,4 +243,28 @@ button:hover {
   justify-content: center;
   align-items: center;
 
+}
+
+body {
+  height: 100vh;
+}
+
+.gradient-pattern {
+  animation: gradient 15s ease infinite;
+  background-image: linear-gradient(135deg, #A82F4C, #6C195C, #50299D, #001892);
+  background-size: 400% 400%;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 51% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 51% 0%;
+  }
 }
