@@ -1,9 +1,12 @@
 /* DEVA Colours */
-/* White: #fff;
-Yellow:#FCC21B;
-Blue: #5FC6CB;
-Purple: #3D0F71;
-Pink: #EF3A58; */
+:root {
+--Light: #ffffff;
+--Dark: #101011;
+--Yellow:#FCC21B;
+--Blue: #5FC6CB;
+--Purple: #3D0F71;
+--Pink: #EF3A58;
+}
 
 /* CSS RESETS
 https://piccalil.li/blog/a-modern-css-reset/
@@ -45,7 +48,8 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1.25;
+
 }
 
 /* Make images easier to work with */
@@ -61,19 +65,35 @@ button,
 textarea,
 select {
   font: inherit;
+
 }
 
 /*
 === STYLES ===
 */
+@media (max-width:630px) {
+  .centerThis {
 
+    width: 100%;
+
+    
+  }
+}
+
+@media (min-width:630px) {
+  .centerThis {
+    width: 100%;
+
+  }
+}
 body {
-  background-color:  white;
+  background-color: var(--White);
   font-family: 'Montserrat Alternates', sans-serif;
 
 }
 header {
-  background-color: #666;
+  background-color:var(--Purple);
+  color: var(--Light);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -94,7 +114,7 @@ input {
   padding: 10px;
 }
 footer {
-  background-color: #666;
+  background-color:var(--Purple);
   font-size: 0.8rem;
   width: 100%;
   height: 60px;
@@ -102,66 +122,90 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-footer p {
-  display: inline-block;
-  padding-top: 10px;
-  margin: 0 10px;
-  color: white;
-}
-
-footer a:link, footer a:visited {
-  color: #AFC2D5;
-}
-
-footer a:hover {
-  color: white;
+  color: var(--Light);
 }
 
 button {
-  background-color: #EF3A58;
-  color: #fff;
+  background-color:var(--Pink);
+  color: var(--Light);
   border: none;
   padding: 15px;
   font-size: 0.8rem;
-  box-shadow: 5px 5px 15px #999;
+  /* box-shadow: 5px 5px 15px #999; */
+  border-radius: 25px;
+  cursor: pointer;
 }
 button:hover {
-  background-color: #3D0F71;
-  color: #fff;
+  background-color: var(--Blue);
+  color: var(--Purple);
   border: none;
   padding: 15px;
   font-size: 0.8rem;
-  box-shadow: 5px 5px 15px #999;
+  /* box-shadow: 5px 5px 15px #999; */
+  border-radius: 25px;
 }
 .app {
   display: flex;
   flex-direction: column;
-}
-.grid {
-  background-color: black;
 }
 .cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: flex-end;
  
 }
+
 .card {
   min-height: 200px;
-  background-size: 75px;
+  background-image: url('DEVA.png');
+  background-size: 40px;
   background-repeat: no-repeat;
-  background-position: center top 10px;
-  background-color: #101011;
+  background-position: bottom left 10px;
+  background-color: var(--Dark);
   box-shadow: 5px 5px 15px #999;
   padding: 15px;
   margin: 10px;
   width: 200px;
   list-style: none;
   border-radius: 10px;
-  color: #FEC02D;
+/* 
+  background-image: url('/images/forest-header.jpg'); */
+  
+}
+
+.wowQuote {
+
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing:1.5px;
+  color:var(--Yellow)
+
+}
+
+.wowName {
+
+  font-family: 'Lobster Two', sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--Blue);
+  letter-spacing:1px;
+  line-height: 1;
+}
+.centerThis {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  background-color:var(--Purple);
+ 
 }
 
 .container {
@@ -176,13 +220,12 @@ button:hover {
 
 
 .form {
-  width: 80%;
-  background-color: #666;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 2rem 3rem 2rem 3rem;
+  width: 75%;
 }
 
 .navbar { 

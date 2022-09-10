@@ -1,10 +1,12 @@
-const initialWowState = ['Quote', 'Name']
+const initialWowState = []
 
 const wowReducer = (state = initialWowState, action) => {
   const { type, payload } = action
   switch (type) {
     case 'ADD_WOW':
       return [...state, payload]
+    case 'SET_WOW':
+      return payload
     case 'DEL_WOW':
       return state.filter((wow) => wow !== payload)
     case 'UPDATE_WOW':
