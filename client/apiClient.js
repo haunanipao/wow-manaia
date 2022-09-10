@@ -17,6 +17,3 @@ export function addWow(form) {
       }
     })
 }
-
-// export function updateWow() {}
-// export function deleteWow() {}

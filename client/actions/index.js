@@ -1,5 +1,7 @@
 // Home of action creators
+import { addWow as addWowApi, getWow } from '../apiClient'
 
+// add a wow
 export function addWow(wow) {
   return {
     type: 'ADD_WOW',
@@ -7,16 +9,35 @@ export function addWow(wow) {
   }
 }
 
-export function updateWow({ quote, newQuote, name, newName }) {
+// all the wows
+export function setWows(wows) {
   return {
-    type: 'UPDATE_WOW',
-    payload: { quote, newQuote, name, newName },
+    type: 'SET_WOW',
+    payload: wows,
   }
 }
 
-export function deleteWow(wow) {
-  return {
-    type: 'DEL_WOW',
-    payload: wow,
+// Complex Functions / fetchWow, returns the dispatch (which returns getWow)
+export function fetchWow() {
+  // come from form component
+  return (dispatch) => {
+    return getWow().then((wows) => {
+      dispatch(setWows(wows))
+      // component interacts with actions and actions interacts with everything else (api, reducer)
+    })
   }
 }
+
+// export function updateWow({ quote, newQuote, name, newName }) {
+//   return {
+//     type: 'UPDATE_WOW',
+//     payload: { quote, newQuote, name, newName },
+//   }
+// }
+
+// export function deleteWow(wow) {
+//   return {
+//     type: 'DEL_WOW',
+//     payload: wow,
+//   }
+// }

@@ -31,11 +31,12 @@ cd [your-app] && npm i
 - [x] Set up api to get Wow data in the browser
 - [x] Get route (server)
 - [x] Set up db -> route -> api client
-- [ ] Set up form to add WOW
-- [ ] Show WOW in browser
-- [ ] CRUD
+- [x] Set up form to add WOW
+- [x] Show WOW in browser
+- [x] Make things Redux > make the Store open
+- [ ] Expand more
 - [ ] CSS Magic
-- [ ] do I wanna do auth, redux
+- [ ] do Auth0?
 
 ---
 To start the development server with a watcher that rebuilds your code, run `npm run dev`. The assets built by webpack are placed in `server/public`. This folder is defined as a static folder in an Express.js server that can be started with `npm run server`.

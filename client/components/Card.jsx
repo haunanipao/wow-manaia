@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 // return everything as a linkable element
 // pass the data to the card.
@@ -8,13 +8,17 @@ export default function Card({ info }) {
     <>
       {info.map((wow) => {
         return (
-          <Link to={`/`} key={wow.id}>
+          <div to={`/`} key={wow.id}>
             <div className="card">
-              <h2 key={wow.quote}>{wow.quote}</h2>
-              <h2 key={wow.name}> ~ {wow.name}</h2>
-              <h2 key={wow.id}>{wow.id}</h2>
+              <h2 className="wowQuote" key={wow.quote}>
+                {wow.quote}
+              </h2>
+              <h2 className="wowName" key={wow.name}>
+                ~ {wow.name}
+              </h2>
+              {/* <h2 key={wow.id}>{wow.id}</h2> */}
             </div>
-          </Link>
+          </div>
         )
       })}
     </>

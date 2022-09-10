@@ -9,8 +9,8 @@ exports.seed = async function (knex) {
   await knex('wow').insert([
     {
       id: 1,
-      name: 'Trish Tararo',
-      quote: 'Recall, Reflex, Relax',
+      name: 'Trish',
+      quote: 'Recall, Reflect, Relax',
       github: 'https://github.com/trish-tararo-03',
       linkedin: 'https://www.linkedin.com/in/trish-tararo-145aa6211/ ',
       discord: 'Trish Tararo#6102',
@@ -18,7 +18,7 @@ exports.seed = async function (knex) {
     },
     {
       id: 2,
-      name: 'Sarah Emerson',
+      name: 'Sarah',
       quote: 'When I feel a celebration inside, I commit.',
       github: 'https://github.com/sarah-emerson',
       linkedin: '',
@@ -32,6 +32,15 @@ exports.seed = async function (knex) {
       github: 'https://github.com/joshuavial',
       linkedin: '',
       discord: '',
+      deva: '',
+    },
+    {
+      id: 4,
+      name: 'Nani',
+      quote: 'Practice makes Permanent.',
+      github: 'https://github.com/haunanipao',
+      linkedin: 'https://www.linkedin.com/in/haunani',
+      discord: 'haunanipao#9472',
       deva: '',
     },
   ])

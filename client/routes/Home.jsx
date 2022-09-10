@@ -16,18 +16,16 @@ export default function Home() {
   useEffect(() => {
     getWow()
       .then((wow) => {
-        // console.log('wow',wow)
         setWows(wow)
       })
       .catch((err) => {
         console.error(err)
       })
-    //console.log('using the effect')
   }, [])
 
   return (
     <Container>
-      <div>
+      <div className="centerThis">
         <AddWow setWows={appendWow} />
         {/* // reference to setWows function on line 9, passes appendWow function */}
       </div>
