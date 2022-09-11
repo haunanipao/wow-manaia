@@ -249,10 +249,6 @@
   
   }
   
-  body {
-    height: 100vh;
-  }
-  
   .gradient-pattern {
     animation: gradient 15s ease infinite;
     background-image: linear-gradient(135deg, #A82F4C, #6C195C, #50299D, #001892);

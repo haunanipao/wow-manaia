@@ -27,7 +27,7 @@ export function fetchWow() {
     })
   }
 }
-
+//
 // export function updateWow({ quote, newQuote, name, newName }) {
 //   return {
 //     type: 'UPDATE_WOW',

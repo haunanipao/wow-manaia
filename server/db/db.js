@@ -38,3 +38,4 @@ function addWow(newWow, db = connection) {
 //   return db('wow').select() //by id work on this one.
 // }
 // delete
+//

@@ -22,3 +22,4 @@ const wowReducer = (state = initialWowState, action) => {
 }
 
 export default wowReducer
+//
