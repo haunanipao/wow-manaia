@@ -8,7 +8,8 @@ export default function Navbar() {
         <h3>
           Hello there Manaia. Over the past few weeks, we've heard alot of
           things that bend our noggins and some that made us laugh. What words
-          of wisdom can you share? #Protip: Keep it short and sweet!
+          of wisdom can you share?{' '}
+          <span className="protip">#Protip: Keep it short and sweet!</span>
         </h3>
       </div>
       {/* <nav className="navbar">Hello there manaia</nav> */}

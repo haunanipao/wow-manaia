@@ -193,6 +193,10 @@ button:hover {
 
 }
 
+.protip {
+  color: var(--Blue);
+  font-weight: 600;
+}
 .wowName {
 
   font-family: 'Lobster Two', sans-serif;
