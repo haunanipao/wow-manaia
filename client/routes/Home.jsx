@@ -1,58 +1,36 @@
 import React, { useState, useEffect } from 'react'
-import { getWow } from '../apiClient'
+import { useDispatch, useSelector } from 'react-redux'
 import Container from '../components/Container'
 import Card from '../components/Card'
 import AddWow from '../components/AddWow'
 
 // REDUX
-// import { fetchWows } from '../actions/redux.js'
-// import { useDispatch, useSelector } from 'react-redux'
+import { fetchWows } from '../actions'
+
 // REDUX
 
 // This is the main bit
 export default function Home() {
-  // REDUX
-  // const [wowss, setWows] = useState([])
+  // const [wows, setWows] = useState([])
+  const [newWow, setNewWow] = useState([])
+  const wows = useSelector((state) => state.wowState)
+  console.log('home wows', wows) //goes to the reducer and looks for state
+  const dispatch = useDispatch() //send thunks to reducers to change things
 
-  // // this is a variable that useSelector(), which uses a state callback function() to return a variable from that function.
-  // const wows = useSelector((state) => state.wows) //goes to the reducer and looks for state
-  // const dispatch = useDispatch() //send thunks to reducers to change things
-
-  // function appendWow(newWow) {
-  //   setWows([...wowss, newWow])
-  //   // add the new object to the wows database
-  // }
-
-  // // call the dispatch and fetchWow(() to get the state
-  // useEffect(() => {
-  //   dispatch(fetchWows())
-  // }, [])
-  // REDUX
-
-  // REACT
-  const [wows, setWows] = useState([])
+  // call the dispatch and fetchWow(() to get the state
+  useEffect(() => {
+    dispatch(fetchWows())
+  }, [])
 
   function appendWow(newWow) {
-    setWows([...wows, newWow])
-    // add the new object to the wows database
+    return setNewWow([...wows, newWow]) // add the new object to the wows database
+    // console.log('home newWow', newWow) //goes to the reducer and looks for state
   }
-
-  useEffect(() => {
-    getWow()
-      .then((wow) => {
-        setWows(wow)
-      })
-      .catch((err) => {
-        console.error(err)
-      })
-  }, [])
-  // REACT
 
   return (
     <Container>
       <div className="centerThis gradient-pattern">
         <AddWow setWows={appendWow} />
-        {/* // reference to setWows function on line 9, passes appendWow function */}
       </div>
       <div className="cards">
         <Card info={wows} />
@@ -60,3 +38,30 @@ export default function Home() {
     </Container>
   )
 }
+// REDUX WITH NO THUNK
+// useEffect(() => {
+//   getWows()
+//   .then((wows) => {
+//     dispatch(setWows(wows))
+//     return null
+//   })
+//  .catch(event => console.log(event))
+// },[])
+// REACT
+// const [wows, setWows] = useState([])
+
+// function appendWow(newWow) {
+//   setWows([...wows, newWow])
+//   // add the new object to the wows database
+// }
+
+// useEffect(() => {
+//   getWow()
+//     .then((wow) => {
+//       setWows(wow)
+//     })
+//     .catch((err) => {
+//       console.error(err)
+//     })
+// }, [])
+// REACT

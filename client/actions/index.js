@@ -1,5 +1,5 @@
 // Home of action creators
-import { addWow as addWowApi, getWow, fetchWow } from '../apiClient'
+import { addWow as addWowApi, getWows } from '../apiClient'
 export const SET_ERROR = 'SET_ERROR'
 
 // add a wow
@@ -18,19 +18,15 @@ export function setWows(wows) {
   }
 }
 
-// Complex Functions / fetchWow, returns the dispatch (which returns getWow)
-export function fetchWow() {
-  // come from form component
-  // look at class lecture code
+// Complex Functions / fetchWows, returns the dispatch (which returns getWows)
+export function fetchWows() {
   return (dispatch) => {
-    return getWow()
+    return getWows()
       .then((wows) => {
         dispatch(setWows(wows))
-        return null
-        // component interacts with actions and actions interacts with everything else (api, reducer)
+        // component interacts with actions and actions interacts with (apiClient, Reducer)
       })
       .catch((err) => {
-        // change errMessage state and loading state
         dispatch(setError(err.message))
       })
   }
