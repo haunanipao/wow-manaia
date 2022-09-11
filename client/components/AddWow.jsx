@@ -39,7 +39,7 @@ export default function AddWow(props) {
           onChange={handleChange}
           value={form.quote}
           name="quote"
-          placeholder="What is your moment of WOW"
+          placeholder="What is your moment of WOW?"
         />
 
         <input
@@ -49,7 +49,7 @@ export default function AddWow(props) {
           name="name"
           placeholder="Who shared it?"
         />
-        <button>Add more WOW</button>
+        <button>Add More WOW</button>
       </form>
     </>
   )
