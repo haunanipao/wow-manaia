@@ -4,14 +4,8 @@ import Container from '../components/Container'
 import Card from '../components/Card'
 import AddWow from '../components/AddWow'
 
-// REDUX
-// import { fetchWows } from '../actions/redux.js'
-// import { useDispatch, useSelector } from 'react-redux'
-// REDUX
-
 // This is the main bit
 export default function Home() {
-  // REACT
   const [wows, setWows] = useState([])
 
   function appendWow(newWow) {
@@ -42,6 +36,12 @@ export default function Home() {
     </Container>
   )
 }
+
+// REDUX
+// import { fetchWows } from '../actions/redux.js'
+// import { useDispatch, useSelector } from 'react-redux'
+// REDUX
+
 // REDUX
 // const [wowss, setWows] = useState([])
 
