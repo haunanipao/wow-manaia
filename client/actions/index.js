@@ -1,6 +1,5 @@
 // Home of action creators
 import { addWow as addWowApi, getWow } from '../apiClient'
-export const SET_ERROR = 'SET_ERROR'
 
 // add a wow
 export function addWow(wow) {
@@ -21,41 +20,13 @@ export function setWows(wows) {
 // Complex Functions / fetchWow, returns the dispatch (which returns getWow)
 export function fetchWow() {
   // come from form component
-  // look at class lecture code
   return (dispatch) => {
-    return getWow()
-      .then((wows) => {
-        dispatch(setWows(wows))
-        // component interacts with actions and actions interacts with everything else (api, reducer)
-      })
-      .catch((err) => {
-        // change errMessage state and loading state
-        dispatch(setError(err.message))
-      })
+    return getWow().then((wows) => {
+      dispatch(setWows(wows))
+      // component interacts with actions and actions interacts with everything else (api, reducer)
+    })
   }
 }
-
-export function setError(errMessage) {
-  return {
-    type: SET_ERROR,
-    errMessage,
-  }
-}
-
-// REDUX THUNK
-// export function addWow(newWow) {
-//   return (dispatch) => {
-//     return addNewWow(newWow)
-//       .then((wows) => {
-//         dispatch(setWowsSuccess(wows))
-//         return null
-//       })
-//       .catch((err) => {
-//         dispatch(setError(err.message))
-//       })
-//   }
-// }
-// REDUX THUNK
 
 // export function updateWow({ quote, newQuote, name, newName }) {
 //   return {
