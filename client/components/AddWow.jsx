@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { addWow } from '../apiClient'
+import { useDispatch } from 'react-redux'
 
 const initialFormData = {
   name: '',
@@ -7,29 +8,48 @@ const initialFormData = {
 }
 
 export default function AddWow(props) {
+  // REACT
+  // const [form, setForm] = useState(initialFormData)
+  // function handleChange(event) {
+  //   const { name, quote, value } = event.target
+  //   const newForm = {
+  //     ...form,
+  //     [name]: value,
+  //     [quote]: value,
+  //   }
+  //   setForm(newForm)
+  // }
+
+  // function handleSubmit(event) {
+  //   event.preventDefault()
+  //   addWow(form)
+  //     .then((newWow) => {
+  //       props.setWows(newWow) // <<< pass the object!!
+  //       setForm(initialFormData)
+  //     })
+  //     .catch((err) => {
+  //       console.error(err.message)
+  //     })
+  // }
+  // REACT
+
+  // REDUX-ING
+  // const newWow = props.quote
+  const dispatch = useDispatch()
   const [form, setForm] = useState(initialFormData)
+  // const [form, setForm] = useState({ quote: '', newQuote: '' })
 
-  function handleChange(event) {
-    const { name, quote, value } = event.target
-    const newForm = {
-      ...form,
-      [name]: value,
-      [quote]: value,
-    }
-    setForm(newForm)
+  const handleChange = async (event) => {
+    setForm({ ...form, [event.target.name]: event.target.value })
   }
 
-  function handleSubmit(event) {
+  const handleSubmit = async (event) => {
     event.preventDefault()
-    addWow(form)
-      .then((newWow) => {
-        props.setWows(newWow) // <<< pass the object!!
-        setForm(initialFormData)
-      })
-      .catch((err) => {
-        console.error(err.message)
-      })
+    dispatch(addWow(form)) //update the db and the state (in the store)
+    // dispatch(appendWow(form)) //update the db and the state (in the store)
+    setForm({ quote: '', name: '' })
   }
+  // END REDUXING
 
   return (
     <>

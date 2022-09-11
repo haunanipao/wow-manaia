@@ -10,7 +10,7 @@ exports.seed = async function (knex) {
     {
       id: 1,
       name: 'Trish',
-      quote: 'Recall, Reflect, Relax',
+      quote: 'Recall, Reflect, Relax.',
       github: 'https://github.com/trish-tararo-03',
       linkedin: 'https://www.linkedin.com/in/trish-tararo-145aa6211/ ',
       discord: 'Trish Tararo#6102',
@@ -41,6 +41,24 @@ exports.seed = async function (knex) {
       github: 'https://github.com/haunanipao',
       linkedin: 'https://www.linkedin.com/in/haunani',
       discord: 'haunanipao#9472',
+      deva: '',
+    },
+    {
+      id: 5,
+      name: 'Whakataukī ',
+      quote: 'There is power in small things.',
+      github: '',
+      linkedin: '',
+      discord: '',
+      deva: '',
+    },
+    {
+      id: 6,
+      name: 'JV',
+      quote: 'Testing is a regal art 👑.',
+      github: '',
+      linkedin: '',
+      discord: '',
       deva: '',
     },
   ])

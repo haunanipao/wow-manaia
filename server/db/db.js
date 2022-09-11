@@ -14,6 +14,13 @@ function getWow(db = connection) {
   return db('wow').select()
 }
 
+// create redux
+function addWow(newWow, db = connection) {
+  return db('wow')
+    .insert(newWow)
+    .then(() => getWow(db))
+}
+
 // create
 // function addWow(newWow, db = connection) {
 //   return db('wow')
@@ -23,17 +30,16 @@ function getWow(db = connection) {
 //     })
 // }
 
-function addWow(newWow, db = connection) {
-  const { name, quote } = newWow
-  return db('wow')
-    .insert(newWow)
-    .then(([id]) => {
-      return { id, name, quote }
-    })
-}
+// function addWow(newWow, db = connection) {
+//   const { name, quote } = newWow
+//   return db('wow')
+//     .insert(newWow)
+//     .then(([id]) => {
+//       return { id, name, quote }
+//     })
+// }
 
 // update
-
 // function updateWow(id, db = connection) {
 //   return db('wow').select() //by id work on this one.
 // }
