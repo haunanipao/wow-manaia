@@ -1,5 +1,5 @@
 // Home of action creators
-import { addWow as addWowApi, getWow, fetchWow } from '../apiClient'
+import { addWow as addWowApi, getWow } from '../apiClient'
 export const SET_ERROR = 'SET_ERROR'
 
 // add a wow
@@ -26,7 +26,6 @@ export function fetchWow() {
     return getWow()
       .then((wows) => {
         dispatch(setWows(wows))
-        return null
         // component interacts with actions and actions interacts with everything else (api, reducer)
       })
       .catch((err) => {

@@ -1,28 +1,38 @@
 import React, { useState } from 'react'
 import { addWow } from '../apiClient'
-import { useDispatch } from 'react-redux'
+// import { useDispatch } from 'react-redux'
 
 const initialFormData = {
   name: '',
   quote: '',
 }
 
-export default function AddWow() {
-  // REDUX-ING
-  const dispatch = useDispatch()
+export default function AddWow(props) {
+  // REACT
   const [form, setForm] = useState(initialFormData)
 
-  const handleChange = async (event) => {
-    setForm({ ...form, [event.target.name]: event.target.value })
+  function handleChange(event) {
+    const { name, quote, value } = event.target
+    const newForm = {
+      ...form,
+      [name]: value,
+      [quote]: value,
+    }
+    setForm(newForm)
   }
 
-  const handleSubmit = async (event) => {
+  function handleSubmit(event) {
     event.preventDefault()
-    dispatch(addWow(form))
-    //update the db and the state (in the store)
-    setForm({ quote: '', name: '' }) // clears the input fields
+    addWow(form)
+      .then((newWow) => {
+        props.setWows(newWow) // <<< pass the object!!
+        setForm(initialFormData)
+      })
+      .catch((err) => {
+        console.error(err.message)
+      })
   }
-  // END REDUXING
+  // REACT
 
   return (
     <>
@@ -47,27 +57,19 @@ export default function AddWow() {
     </>
   )
 }
-// REACT
+
+// REDUX-ING
+// const dispatch = useDispatch()
 // const [form, setForm] = useState(initialFormData)
-// function handleChange(event) {
-//   const { name, quote, value } = event.target
-//   const newForm = {
-//     ...form,
-//     [name]: value,
-//     [quote]: value,
-//   }
-//   setForm(newForm)
+
+// const handleChange = async (event) => {
+//   setForm({ ...form, [event.target.name]: event.target.value })
 // }
 
-// function handleSubmit(event) {
+// const handleSubmit = async (event) => {
 //   event.preventDefault()
-//   addWow(form)
-//     .then((newWow) => {
-//       props.setWows(newWow) // <<< pass the object!!
-//       setForm(initialFormData)
-//     })
-//     .catch((err) => {
-//       console.error(err.message)
-//     })
+//   dispatch(addWow(form))
+//   //update the db and the state (in the store)
+//   setForm({ quote: '', name: '' }) // clears the input fields
 // }
-// REACT
+// END REDUXING

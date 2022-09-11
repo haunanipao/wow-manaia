@@ -11,24 +11,6 @@ import AddWow from '../components/AddWow'
 
 // This is the main bit
 export default function Home() {
-  // REDUX
-  // const [wowss, setWows] = useState([])
-
-  // // this is a variable that useSelector(), which uses a state callback function() to return a variable from that function.
-  // const wows = useSelector((state) => state.wows) //goes to the reducer and looks for state
-  // const dispatch = useDispatch() //send thunks to reducers to change things
-
-  // function appendWow(newWow) {
-  //   setWows([...wowss, newWow])
-  //   // add the new object to the wows database
-  // }
-
-  // // call the dispatch and fetchWow(() to get the state
-  // useEffect(() => {
-  //   dispatch(fetchWows())
-  // }, [])
-  // REDUX
-
   // REACT
   const [wows, setWows] = useState([])
 
@@ -60,3 +42,20 @@ export default function Home() {
     </Container>
   )
 }
+// REDUX
+// const [wowss, setWows] = useState([])
+
+// // this is a variable that useSelector(), which uses a state callback function() to return a variable from that function.
+// const wows = useSelector((state) => state.wows) //goes to the reducer and looks for state
+// const dispatch = useDispatch() //send thunks to reducers to change things
+
+// function appendWow(newWow) {
+//   setWows([...wowss, newWow])
+//   // add the new object to the wows database
+// }
+
+// // call the dispatch and fetchWow(() to get the state
+// useEffect(() => {
+//   dispatch(fetchWows())
+// }, [])
+// REDUX
