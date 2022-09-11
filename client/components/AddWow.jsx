@@ -7,37 +7,10 @@ const initialFormData = {
   quote: '',
 }
 
-export default function AddWow(props) {
-  // REACT
-  // const [form, setForm] = useState(initialFormData)
-  // function handleChange(event) {
-  //   const { name, quote, value } = event.target
-  //   const newForm = {
-  //     ...form,
-  //     [name]: value,
-  //     [quote]: value,
-  //   }
-  //   setForm(newForm)
-  // }
-
-  // function handleSubmit(event) {
-  //   event.preventDefault()
-  //   addWow(form)
-  //     .then((newWow) => {
-  //       props.setWows(newWow) // <<< pass the object!!
-  //       setForm(initialFormData)
-  //     })
-  //     .catch((err) => {
-  //       console.error(err.message)
-  //     })
-  // }
-  // REACT
-
+export default function AddWow() {
   // REDUX-ING
-  // const newWow = props.quote
   const dispatch = useDispatch()
   const [form, setForm] = useState(initialFormData)
-  // const [form, setForm] = useState({ quote: '', newQuote: '' })
 
   const handleChange = async (event) => {
     setForm({ ...form, [event.target.name]: event.target.value })
@@ -45,9 +18,9 @@ export default function AddWow(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    dispatch(addWow(form)) //update the db and the state (in the store)
-    // dispatch(appendWow(form)) //update the db and the state (in the store)
-    setForm({ quote: '', name: '' })
+    dispatch(addWow(form))
+    //update the db and the state (in the store)
+    setForm({ quote: '', name: '' }) // clears the input fields
   }
   // END REDUXING
 
@@ -74,3 +47,27 @@ export default function AddWow(props) {
     </>
   )
 }
+// REACT
+// const [form, setForm] = useState(initialFormData)
+// function handleChange(event) {
+//   const { name, quote, value } = event.target
+//   const newForm = {
+//     ...form,
+//     [name]: value,
+//     [quote]: value,
+//   }
+//   setForm(newForm)
+// }
+
+// function handleSubmit(event) {
+//   event.preventDefault()
+//   addWow(form)
+//     .then((newWow) => {
+//       props.setWows(newWow) // <<< pass the object!!
+//       setForm(initialFormData)
+//     })
+//     .catch((err) => {
+//       console.error(err.message)
+//     })
+// }
+// REACT
