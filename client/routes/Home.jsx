@@ -13,24 +13,29 @@ import { fetchWows } from '../actions'
 export default function Home() {
   // const [wows, setWows] = useState([])
   const [newWow, setNewWow] = useState([])
+  //goes to the reducer and looks for state
   const wows = useSelector((state) => state.wowState)
-  console.log('home wows', wows) //goes to the reducer and looks for state
-  const dispatch = useDispatch() //send thunks to reducers to change things
+  console.log('DB', wows)
 
+  const dispatch = useDispatch()
+  // send thunks to reducers to change things
   // call the dispatch and fetchWow(() to get the state
   useEffect(() => {
-    dispatch(fetchWows())
+    dispatch(fetchWows(newWow))
   }, [])
 
   function appendWow(newWow) {
-    return setNewWow([...wows, newWow]) // add the new object to the wows database
-    // console.log('home newWow', newWow) //goes to the reducer and looks for state
+    console.log('append-newWow', newWow) //goes to the reducer and looks for state
+    setNewWow([...wows, newWow]) // add the new object to the wows database
+    console.log('append-wows', wows) //not working
+    return
   }
 
   return (
     <Container>
       <div className="centerThis gradient-pattern">
         <AddWow setWows={appendWow} />
+        {/* <AddWow /> */}
       </div>
       <div className="cards">
         <Card info={wows} />
