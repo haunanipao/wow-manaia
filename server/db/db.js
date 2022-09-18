@@ -18,7 +18,9 @@ function getWow(db = connection) {
 function addWow(newWow, db = connection) {
   return db('wow')
     .insert(newWow)
-    .then(() => getWow(db))
+    .then(() => {
+      return getWow(db)
+    })
 }
 
 // create

@@ -10,7 +10,6 @@ export default function Home() {
 
   function appendWow(newWow) {
     setWows([...wows, newWow])
-    // add the new object to the wows database
   }
 
   useEffect(() => {
@@ -28,7 +27,6 @@ export default function Home() {
     <Container>
       <div className="centerThis gradient-pattern">
         <AddWow setWows={appendWow} />
-        {/* // reference to setWows function on line 9, passes appendWow function */}
       </div>
       <div className="cards">
         <Card info={wows} />
