@@ -160,13 +160,11 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
-    
-   
+    margin:20px;
   }
   
   .card {
     min-height: 200px;
-    background-image: url('DEVA.png');
     background-size: 40px;
     background-repeat: no-repeat;
     background-position: bottom left 10px;
@@ -181,7 +179,15 @@
     background-image: url('/images/forest-header.jpg'); */
     
   }
+  .instruction {
   
+    color: var(--Light);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+  }
   .wowQuote {
   
     font-family: 'Bebas Neue', sans-serif;
@@ -228,6 +234,9 @@
     justify-content: start;
     align-items: space-evenly;
     font-size: .75em;
+  
+  
+  
   }
   
   
@@ -257,8 +266,6 @@
     animation: gradient 15s ease infinite;
     background-image: linear-gradient(135deg, #A82F4C, #6C195C, #50299D, #001892);
     background-size: 400% 400%;
-    height: 100%;
-    width: 100%;
   }
   
   @keyframes gradient {

@@ -9,40 +9,17 @@ module.exports = {
   addWow,
 }
 
-//read
+// read
 function getWow(db = connection) {
   return db('wow').select()
 }
 
-// create redux
+// create
 function addWow(newWow, db = connection) {
+  const { name, quote } = newWow
   return db('wow')
     .insert(newWow)
-    .then(() => {
-      return getWow(db)
+    .then(([id]) => {
+      return { id, name, quote }
     })
 }
-
-// create
-// function addWow(newWow, db = connection) {
-//   return db('wow')
-//     .insert({ name: newWow.name, quote: newWow.quote })
-//     .then(() => {
-//       return getWow(db)
-//     })
-// }
-
-// function addWow(newWow, db = connection) {
-//   const { name, quote } = newWow
-//   return db('wow')
-//     .insert(newWow)
-//     .then(([id]) => {
-//       return { id, name, quote }
-//     })
-// }
-
-// update
-// function updateWow(id, db = connection) {
-//   return db('wow').select() //by id work on this one.
-// }
-// delete

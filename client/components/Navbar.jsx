@@ -4,6 +4,7 @@ export default function Navbar() {
   return (
     <header className="gradient-pattern">
       <div>
+        <img src="DEVA.png" alt="Dev Academy Aotearoa" width="100px" />
         <h1>Manaia Words of Wisdom</h1>
         <h3>
           Hello there Manaia. Over the past few weeks, we've heard alot of
