@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { addWow } from '../apiClient'
+import { addWow } from '../actions'
 import { useDispatch } from 'react-redux'
 
 const initialFormData = {
@@ -19,8 +19,7 @@ export default function AddWow() {
   const handleSubmit = async (event) => {
     event.preventDefault()
     dispatch(addWow(form))
-    //update the db and the state (in the store)
-    setForm({ quote: '', name: '' }) // clears the input fields
+    setForm(initialFormData)
   }
   // END REDUXING
 
@@ -47,27 +46,3 @@ export default function AddWow() {
     </>
   )
 }
-// REACT
-// const [form, setForm] = useState(initialFormData)
-// function handleChange(event) {
-//   const { name, quote, value } = event.target
-//   const newForm = {
-//     ...form,
-//     [name]: value,
-//     [quote]: value,
-//   }
-//   setForm(newForm)
-// }
-
-// function handleSubmit(event) {
-//   event.preventDefault()
-//   addWow(form)
-//     .then((newWow) => {
-//       props.setWows(newWow) // <<< pass the object!!
-//       setForm(initialFormData)
-//     })
-//     .catch((err) => {
-//       console.error(err.message)
-//     })
-// }
-// REACT

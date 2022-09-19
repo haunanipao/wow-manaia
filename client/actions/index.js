@@ -1,14 +1,14 @@
 // Home of action creators
-import { addWow as addWowApi, getWows } from '../apiClient'
+import { addWow as addNewWow, getWows } from '../apiClient'
 export const SET_ERROR = 'SET_ERROR'
 
 // add a wow
-export function addWow(wow) {
-  return {
-    type: 'ADD_WOW',
-    payload: wow,
-  }
-}
+// export function addWow(wow) {
+//   return {
+//     type: 'ADD_WOW',
+//     payload: wow,
+//   }
+// }
 
 // all the wows
 export function setWows(wows) {
@@ -40,18 +40,18 @@ export function setError(errMessage) {
 }
 
 // REDUX THUNK
-// export function addWow(newWow) {
-//   return (dispatch) => {
-//     return addNewWow(newWow)
-//       .then((wows) => {
-//         dispatch(setWowsSuccess(wows))
-//         return null
-//       })
-//       .catch((err) => {
-//         dispatch(setError(err.message))
-//       })
-//   }
-// }
+export function addWow(newWow) {
+  return (dispatch) => {
+    return addNewWow(newWow) // api function
+      .then(() => {
+        dispatch(fetchWows())
+        return null
+      })
+      .catch((err) => {
+        dispatch(setError(err.message))
+      })
+  }
+}
 // REDUX THUNK
 
 // export function updateWow({ quote, newQuote, name, newName }) {
