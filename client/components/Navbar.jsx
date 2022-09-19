@@ -12,7 +12,6 @@ export default function Navbar() {
           <p className="protip">#Protip: Keep it short and sweet!</p>
         </h3>
       </div>
-      {/* <nav className="navbar">Hello there manaia</nav> */}
     </header>
   )
 }

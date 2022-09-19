@@ -16,7 +16,7 @@ export default function Card({ info }) {
               <h2 className="wowName" key={wow.name}>
                 ~ {wow.name}
               </h2>
-              <h2 key={wow.id}>
+              {/* <h2 key={wow.id}>
                 {
                   !wow.github || (
                     <a href={wow.github} target="_blank" rel="noreferrer">
@@ -27,13 +27,13 @@ export default function Card({ info }) {
                       />
                     </a>
                   )
-                  // (
-                  //   <a href={wow.discord} target="_blank" rel="noreferrer">
-                  //     <img src="./images/discord.png" alt="{wow.discord}" />
-                  //   </a>
-                  // )
+                  (
+                    <a href={wow.discord} target="_blank" rel="noreferrer">
+                      <img src="./images/discord.png" alt="{wow.discord}" />
+                    </a>
+                  )
                 }
-              </h2>
+              </h2> */}
             </div>
           </div>
         )

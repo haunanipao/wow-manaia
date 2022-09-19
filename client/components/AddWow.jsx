@@ -8,7 +8,6 @@ const initialFormData = {
 }
 
 export default function AddWow() {
-  // REDUX-ING
   const dispatch = useDispatch()
   const [form, setForm] = useState(initialFormData)
 
@@ -21,7 +20,6 @@ export default function AddWow() {
     dispatch(addWow(form))
     setForm(initialFormData)
   }
-  // END REDUXING
 
   return (
     <>
