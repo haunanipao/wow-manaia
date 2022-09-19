@@ -9,7 +9,7 @@ export default function Card({ info }) {
       {info.map((wow) => {
         return (
           <div to={`/`} key={wow.id}>
-            <div className="card">
+            <div className="card gradient-pattern">
               <h2 className="wowQuote" key={wow.quote}>
                 {wow.quote}
               </h2>

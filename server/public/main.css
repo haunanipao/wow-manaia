@@ -253,8 +253,6 @@
     animation: gradient 15s ease infinite;
     background-image: linear-gradient(135deg, #A82F4C, #6C195C, #50299D, #001892);
     background-size: 400% 400%;
-    height: 100%;
-    width: 100%;
   }
   
   @keyframes gradient {
