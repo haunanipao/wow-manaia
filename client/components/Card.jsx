@@ -1,8 +1,5 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
 
-// return everything as a linkable element
-// pass the data to the card.
 export default function Card({ info }) {
   return (
     <>
@@ -16,7 +13,6 @@ export default function Card({ info }) {
               <h2 className="wowName" key={wow.name}>
                 ~ {wow.name}
               </h2>
-              {/* <h2 key={wow.id}>{wow.id}</h2> */}
             </div>
           </div>
         )
@@ -24,4 +20,3 @@ export default function Card({ info }) {
     </>
   )
 }
-//

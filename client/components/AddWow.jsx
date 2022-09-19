@@ -23,7 +23,7 @@ export default function AddWow(props) {
     event.preventDefault()
     addWow(form)
       .then((newWow) => {
-        props.setWows(newWow) // <<< pass the object!!
+        props.setWows(newWow)
         setForm(initialFormData)
       })
       .catch((err) => {
