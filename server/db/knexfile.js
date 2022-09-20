@@ -26,6 +26,12 @@ module.exports = {
       filename: ':memory:',
     },
     useNullAsDefault: true,
+    seeds: {
+      directory: path.join(__dirname, 'seeds'),
+    },
+    migrations: {
+      directory: path.join(__dirname, 'migrations'),
+    },
   },
   staging: {
     client: 'postgresql',
