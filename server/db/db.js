@@ -3,12 +3,12 @@ const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
-  getWow,
+  getWows,
   addWow,
 }
 
 // read
-function getWow(db = connection) {
+function getWows(db = connection) {
   return db('wow').select()
 }
 
