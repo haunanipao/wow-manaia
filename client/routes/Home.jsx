@@ -8,7 +8,6 @@ import { fetchWows } from '../actions'
 
 export default function Home() {
   const wows = useSelector((state) => state.wowState)
-  console.log('DB', wows)
 
   const dispatch = useDispatch()
   useEffect(() => {
@@ -18,6 +17,7 @@ export default function Home() {
   return (
     <Container>
       <div className="centerThis gradient-pattern">
+
         <AddWow />
       </div>
       <div className="cards">

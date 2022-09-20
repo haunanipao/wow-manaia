@@ -1,6 +1,8 @@
 // Home of action creators
+
 import { addWow as addNewWow, getWows } from '../apiClient'
 export const SET_ERROR = 'SET_ERROR'
+
 
 // all the wows
 export function setWows(wows) {
@@ -9,6 +11,7 @@ export function setWows(wows) {
     payload: wows,
   }
 }
+
 
 export function addWow(newWow) {
   return (dispatch) => {
@@ -45,7 +48,6 @@ export function setError(errMessage) {
 }
 
 // REDUX THUNK
-
 // export function updateWow({ quote, newQuote, name, newName }) {
 //   return {
 //     type: 'UPDATE_WOW',
