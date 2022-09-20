@@ -238,24 +238,188 @@
   
   
   }
+
+}
+body {
+  background-color: var(--White);
+  font-family: 'Montserrat Alternates', sans-serif;
+
+}
+header {
+  color: var(--Light);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding:20px;
+}
+h1 {padding-bottom:25px;}
+h3 {font-weight:400;
+min-width: 50%;}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+li {
+  padding: 20px;
+}
+input {
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+}
+footer {
+  padding: 30px;
+  font-size: 0.8rem;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--Light);
+}
+
+button {
+  background-color:var(--Yellow);
+  color: var(--Purple);
+  min-width:25%;
+  border: none;
+  padding: 15px;
+  margin: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  /* box-shadow: 5px 5px 15px #999; */
+  border-radius: 25px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--Blue);
+  color: var(--Purple);
+  border: none;
+  padding: 15px;
+  font-size: 0.8rem;
+  /* box-shadow: 5px 5px 15px #999; */
+  border-radius: 25px;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin:20px;
+}
+
+.card {
+  min-height: 200px;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: bottom left 10px;
+  background-color: var(--Dark);
+  box-shadow: 5px 5px 15px #999;
+  padding: 15px;
+  margin: 10px;
+  width: 200px;
+  list-style: none;
+  border-radius: 10px;
+/* 
+  background-image: url('/images/forest-header.jpg'); */
   
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 3rem 2rem 3rem;
-    width: 75%;
-  }
-  
-  .navbar { 
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  
+}
+
+.wowQuote {
+
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing:1.5px;
+  color:var(--Yellow)
+
+}
+
+.protip {
+  color: var(--Blue);
+  font-weight: 600;
+}
+.wowName {
+
+  font-family: 'Lobster Two', sans-serif;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--Blue);
+  letter-spacing:1px;
+  line-height: 1;
+}
+.centerThis {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+
+ 
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: space-evenly;
+  font-size: .75em;
+
+
+
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 3rem 2rem 3rem;
+  width: 75%;
+}
+
+.navbar { 
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+body {
+  height: 100vh;
+}
+
+.gradient-pattern {
+  animation: gradient 15s ease infinite;
+  background-image: linear-gradient(135deg, #A82F4C, #6C195C, #50299D, #001892);
+  background-size: 400% 400%;
+
+  /* height: 100%;
+  width: 100%; */
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 51% 0%;
   }
   
   body {

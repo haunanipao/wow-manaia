@@ -1,10 +1,12 @@
 import request from 'superagent'
 const serverURL = '/api/v1/wow'
 
-export function getWow() {
+// Get all the WOWs
+export function getWows() {
   return request.get(serverURL).then((res) => res.body)
 }
 
+// Add a WOW from the form
 export function addWow(form) {
   return request
     .post(serverURL)

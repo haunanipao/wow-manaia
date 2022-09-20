@@ -13,7 +13,9 @@ export default function Card({ info }) {
               <h2 className="wowName" key={wow.name}>
                 ~ {wow.name}
               </h2>
-            </div>
+
+  
+             </div>
           </div>
         )
       })}

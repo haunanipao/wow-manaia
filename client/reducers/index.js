@@ -2,7 +2,7 @@ import { combineReducers } from 'redux'
 import wowReducer from './wow'
 
 const reducer = combineReducers({
-  wow: wowReducer,
+  wowState: wowReducer,
 })
 
 export default reducer

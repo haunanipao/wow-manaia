@@ -1,30 +1,24 @@
-import React, { useState, useEffect } from 'react'
-import { getWow } from '../apiClient'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import Container from '../components/Container'
 import Card from '../components/Card'
 import AddWow from '../components/AddWow'
 
+import { fetchWows } from '../actions'
+
 export default function Home() {
-  const [wows, setWows] = useState([])
+  const wows = useSelector((state) => state.wowState)
 
-  function appendWow(newWow) {
-    setWows([...wows, newWow])
-  }
-
+  const dispatch = useDispatch()
   useEffect(() => {
-    getWow()
-      .then((wow) => {
-        setWows(wow)
-      })
-      .catch((err) => {
-        console.error(err)
-      })
+    dispatch(fetchWows())
   }, [])
 
   return (
     <Container>
       <div className="centerThis gradient-pattern">
-        <AddWow setWows={appendWow} />
+
+        <AddWow />
       </div>
       <div className="cards">
         <Card info={wows} />

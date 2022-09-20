@@ -33,7 +33,10 @@ cd [your-app] && npm i
 - [x] Set up db -> route -> api client
 - [x] Set up form to add WOW
 - [x] Show WOW in browser
-- [x] This is the REACT branch
+- [x] Make things Redux > make the Store open
+- [x] CSS Magic
+- [ ] do Auth0?
+- [ ] Expand more
 
 ---
 To start the development server with a watcher that rebuilds your code, run `npm run dev`. The assets built by webpack are placed in `server/public`. This folder is defined as a static folder in an Express.js server that can be started with `npm run server`.
