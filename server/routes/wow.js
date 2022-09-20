@@ -5,7 +5,7 @@ const db = require('../db/db')
 
 // GET /api/v1
 router.get('/', (req, res) => {
-  db.getWow()
+  db.getWows()
     .then((wow) => {
       res.json(wow)
     })
