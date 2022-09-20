@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import Container from '../components/Container'
 import Card from '../components/Card'
 import AddWow from '../components/AddWow'
-
 import { fetchWows } from '../actions'
 
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
   return (
     <Container>
       <div className="centerThis gradient-pattern">
-
         <AddWow />
       </div>
       <div className="cards">

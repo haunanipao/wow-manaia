@@ -15,7 +15,7 @@ export function addWow(form) {
       if (res.status === 200) {
         return res.body
       } else {
-        throw new Error('wow not saved')
+        throw new Error('WOW was not saved')
       }
     })
 }

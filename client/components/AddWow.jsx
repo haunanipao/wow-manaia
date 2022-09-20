@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-
 import { addWow } from '../actions'
 import { useDispatch } from 'react-redux'
 
@@ -10,10 +9,9 @@ const initialFormData = {
 
 export default function AddWow() {
   const dispatch = useDispatch()
-
   const [form, setForm] = useState(initialFormData)
 
- const handleChange = async (event) => {
+  const handleChange = async (event) => {
     setForm({ ...form, [event.target.name]: event.target.value })
   }
 

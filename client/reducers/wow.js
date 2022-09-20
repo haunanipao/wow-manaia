@@ -15,7 +15,6 @@ const wowReducer = (state = initialWowState, action) => {
         // Q: how do I update more than 1 field?  I need to break this down more.
       })
 
-    // console.log(state)
     default:
       return state
   }

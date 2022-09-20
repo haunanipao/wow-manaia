@@ -1,8 +1,6 @@
 // Home of action creators
-
 import { addWow as addNewWow, getWows } from '../apiClient'
 export const SET_ERROR = 'SET_ERROR'
-
 
 // all the wows
 export function setWows(wows) {
@@ -12,10 +10,9 @@ export function setWows(wows) {
   }
 }
 
-
 export function addWow(newWow) {
   return (dispatch) => {
-    return addNewWow(newWow) //goes to api function
+    return addNewWow(newWow)
       .then(() => {
         dispatch(fetchWows())
         return null
