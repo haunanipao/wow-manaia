@@ -35,8 +35,12 @@ cd [your-app] && npm i
 - [x] Show WOW in browser
 - [x] Make things Redux > make the Store open
 - [x] CSS Magic
+- [x] Updated local files and build
+- [x] Deploy to Vercel
 - [ ] do Auth0?
-- [ ] Expand more
+- [ ] Expand more with edit and delete
+- [ ] Describe project case study for portfolio.
+
 
 ---
 To start the development server with a watcher that rebuilds your code, run `npm run dev`. The assets built by webpack are placed in `server/public`. This folder is defined as a static folder in an Express.js server that can be started with `npm run server`.
