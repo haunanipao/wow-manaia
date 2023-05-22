@@ -68,3 +68,4 @@ bundle.*
 dev.sqlite3
 
 tags
+.vercel
