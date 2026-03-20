@@ -27,6 +27,7 @@ module.exports = {
     },
     useNullAsDefault: true,
   },
+
   staging: {
     client: 'postgresql',
     connection: {
@@ -55,6 +56,7 @@ module.exports = {
     },
     migrations: {
       tableName: 'knex_migrations',
+      directory: path.join(__dirname, 'migrations'),
     },
   },
 }
