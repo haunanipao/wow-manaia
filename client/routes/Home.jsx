@@ -15,12 +15,8 @@ export default function Home() {
 
   return (
     <Container>
-      <div className="centerThis gradient-pattern">
-        <AddWow />
-      </div>
-      <div className="cards">
-        <Card info={wows} />
-      </div>
+      <AddWow />
+      <Card info={wows} />
     </Container>
   )
 }

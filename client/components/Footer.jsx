@@ -2,8 +2,9 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <div className="gradient-pattern">
-      <footer>&copy; 2022 / Manaia / Words of Wisdom</footer>
-    </div>
+    <footer className="wow-footer">
+      <div className="wow-footer-line"></div>
+      <p>&copy; 2026 // THE MANAIA ARCHIVE // CURATED WISDOM</p>
+    </footer>
   )
 }

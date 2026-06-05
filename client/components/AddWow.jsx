@@ -5,42 +5,85 @@ import { useDispatch } from 'react-redux'
 const initialFormData = {
   name: '',
   quote: '',
+  github: '',
+  discord: '',
+  linkedin: '',
 }
 
 export default function AddWow() {
   const dispatch = useDispatch()
   const [form, setForm] = useState(initialFormData)
+  const [showExtras, setShowExtras] = useState(false)
 
-  const handleChange = async (event) => {
+  const handleChange = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value })
   }
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault()
     dispatch(addWow(form))
     setForm(initialFormData)
+    setShowExtras(false)
   }
 
   return (
-    <>
-      <form onSubmit={handleSubmit} className="form">
-        <input
+    <div className="wow-form-container">
+      <form onSubmit={handleSubmit} className="wow-form">
+        <textarea
           id="quote"
           onChange={handleChange}
           value={form.quote}
           name="quote"
-          placeholder="What is your moment of WOW?"
+          placeholder="CAPTURE A MOMENT OF WOW..."
+          className="wow-input-large"
+          required
         />
 
-        <input
-          id="name"
-          onChange={handleChange}
-          value={form.name}
-          name="name"
-          placeholder="Who shared it?"
-        />
-        <button>Add More WOW</button>
+        <div className="wow-form-row">
+          <input
+            id="name"
+            onChange={handleChange}
+            value={form.name}
+            name="name"
+            placeholder="WHO SAID IT?"
+            className="wow-input-small"
+            required
+          />
+          <button type="button" 
+                  className="wow-button-ghost"
+                  onClick={() => setShowExtras(!showExtras)}>
+            {showExtras ? '- LESS' : '+ SOCIALS'}
+          </button>
+        </div>
+
+        {showExtras && (
+          <div className="wow-form-extras">
+            <input
+              name="github"
+              onChange={handleChange}
+              value={form.github}
+              placeholder="GITHUB URL"
+              className="wow-input-small"
+            />
+            <input
+              name="discord"
+              onChange={handleChange}
+              value={form.discord}
+              placeholder="DISCORD TAG"
+              className="wow-input-small"
+            />
+            <input
+              name="linkedin"
+              onChange={handleChange}
+              value={form.linkedin}
+              placeholder="LINKEDIN URL"
+              className="wow-input-small"
+            />
+          </div>
+        )}
+
+        <button className="wow-button-primary">ARCHIVE WISDOM</button>
       </form>
-    </>
+    </div>
   )
 }
